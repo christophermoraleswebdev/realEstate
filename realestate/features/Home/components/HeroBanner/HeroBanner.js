@@ -1,3 +1,5 @@
+import HeroForm from "../HeroForm/HeroForm"
+
 const { Box, Text, Fade } = require("@chakra-ui/react")
 
 
@@ -47,7 +49,7 @@ const HeroBanner = () => {
                         <Box
                               width={{ base: '100%', sm: 'auto'}}
                         >
-                              FORM
+                              <HeroForm />
                         </Box>
                   </Box>
             </Box>
