@@ -1,12 +1,23 @@
+import FeaturedProperties from "@/features/Home/components/FeaturedProperties/FeaturedProperties"
 import HeroBanner from "@/features/Home/components/HeroBanner/HeroBanner"
 import DefaultLayout from "@/features/Layouts/Defaultlayout/DefaultLayout"
 
-export default function Home() {
+export default function Home({ featuredProperties }) {
+  
   return (
     <>
       <DefaultLayout>
         <HeroBanner />
+        <FeaturedProperties featuredProperties={featuredProperties}/>
       </DefaultLayout>
     </>
   )
+}
+
+
+export async function getStaticProps(){
+  const { hits } = require('@/features/data/properties')
+  return {
+    props: { featuredProperties: hits }
+  }
 }

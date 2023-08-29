@@ -45,9 +45,15 @@ const HeroBanner = () => {
                               >
                                     Purchase our new <strong>Property Buying Guide</strong> today ...
                               </Text>
+                              <Text
+                                    fontSize={{ base: 'lg', sm: '2xl'}}
+                              >
+                                    Free PDF with the best strategies to for evaluating a property purchase. 
+                              </Text>
                         </Box>
                         <Box
                               width={{ base: '100%', sm: 'auto'}}
+                              marginTop={{ base: '2rem', sm: '0'}}
                         >
                               <HeroForm />
                         </Box>
